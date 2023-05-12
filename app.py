@@ -6,5 +6,11 @@ df = pd.read_csv('vehicles_us.csv')
 
 st.header('Price by Type of vehicle')
 
-fig = px.histogram(df, x = ['price'], color = 'type')
-st.write(fig)
+fig_a = px.histogram(df, x = ['price'], color = 'type')
+st.write(fig_a)
+
+st.header('Price by Model Year of vehicle')
+
+fig_b = px.histogram(df, x = ['price'], color = 'year')
+st.write(fig_b)
+
