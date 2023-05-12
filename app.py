@@ -11,6 +11,6 @@ st.write(fig_a)
 
 st.header('Price by Model Year of vehicle')
 
-fig_b = px.histogram(df, x = ['price'], color = 'year')
+fig_b = px.histogram(df, x = ['price'], color = 'model_year')
 st.write(fig_b)
 
