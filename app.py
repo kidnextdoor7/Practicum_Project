@@ -16,6 +16,6 @@ st.write(fig_a)
 
 st.header('Price by Model Year of vehicle')
 
-fig_b = px.scatter(df, x = ['price'], color = 'model_year')
+fig_b = px.scatter(df, x = ['price'], y = 'model_year')
 st.write(fig_b)
 
