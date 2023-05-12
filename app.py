@@ -6,11 +6,16 @@ df = pd.read_csv('vehicles_us.csv')
 
 st.header('Price by Type of vehicle')
 
-fig_a = px.histogram(df, x = ['price'], color = 'type')
+show_salvage_cars = st.checkbox('Show Salvage Cars')
+
+if not show_salvage_cars:
+    df = df[df.condition!='salvage']
+
+fig_a = px.histogram(df, x = ['condition'], color = 'type')
 st.write(fig_a)
 
 st.header('Price by Model Year of vehicle')
 
-fig_b = px.histogram(df, x = ['price'], color = 'model_year')
+fig_b = px.scatter(df, x = ['price'], color = 'model_year')
 st.write(fig_b)
 
