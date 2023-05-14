@@ -11,7 +11,7 @@ show_salvage_cars = st.checkbox('Show Salvage Cars')
 if not show_salvage_cars:
     df = df[df.condition!='salvage']
 
-fig_a = px.histogram(df, x = ['condition'], color = 'type')
+fig_a = px.histogram(df, x = ['price'], color = 'condition')
 st.write(fig_a)
 
 st.header('Price by Model Year of vehicle')
